@@ -35,6 +35,10 @@
 			
 		}
 	}
+	else{
+		//telling you its already has been created
+		echo "Database already exists";
+	}
 
 
 
