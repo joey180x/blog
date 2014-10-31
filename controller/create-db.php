@@ -10,7 +10,7 @@
 	
 	if($connection->connect_error) {
 		//If statement checks for error
-		die("Error: " . $connection->cennect_error);
+		die("<p>Error: " . $connection->cennect_error . "</p>");
 	}
 	
 	$exists = $connection->select_db($database);
@@ -31,13 +31,13 @@
 
 
 		if($query) {
-		echo "Succesfully created database: " . $database;	
+		echo "<p>Succesfully created database: " . $database . "</p>";	
 			
 		}
 	}
 	else{
 		//telling you its already has been created
-		echo "Database already exists";
+		echo "<p>Database already exists.</p>";
 	}
 
 	//query id for each post
@@ -51,5 +51,13 @@
 		. "PRIMARY KEY (id))");
 	//Primary key = way tables are connected to each other
 	//every post has to have a id, title, and post text
+
+	if($query) {
+		echo "<p>Succesfully created table: posts</P.";
+	}
+	//echos if it has been succesfully created
+	else{
+		echo "<p>$connection->error</p>";
+	}
 
 	$connection->close();
