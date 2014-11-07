@@ -1,0 +1,12 @@
+html{
+	background-color: black;
+}
+@media (max-width: 320px) {
+	html { background-color: red; }
+}
+	@media (max-width: 375px) {
+		html { background-color: red; }
+	}
+		@media (max-width: 1024px) {
+			html { background-color: red; }
+		}
