@@ -4,4 +4,8 @@
 	//and where to grab it from
 	$post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 	//saving inputs in variables
+
+	echo "<p>Titlt: $title</p>";
+	echo "<p>Post: $post";
+	//recieves from database
 ?>

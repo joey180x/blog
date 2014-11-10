@@ -1,12 +1,14 @@
-html{
-	background-color: black;
+body{
+	background-color: red;
+	/*Main background color*/
 }
 @media (max-width: 320px) {
-	html { background-color: red; }
-}
-	@media (max-width: 375px) {
-		html { background-color: red; }
+	body { background-color: green; }
+	/*iPhone 5 Optimization*/
+
 	}
-		@media (max-width: 1024px) {
-			html { background-color: red; }
+		@media (min-width: 321px) and (max-width: 1024px) {
+			body { background-color: aqua; }
+			/*iPad 3/4 Optimization*/
 		}
+	}
