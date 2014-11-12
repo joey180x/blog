@@ -1,7 +1,15 @@
+<?php
+	require_once(__DIR__ . "/../model/config.php")
+	//inserted php to form.php
+	//not have access to config path
+?>
+
 <h1>Create Blog Post</h1>
 <!--says what you;re about to see-->
 
-<form>
+<form method="post" action="<?php echo $path . "controller/create-post.php"; ?>">
+<!-- " post " tells it to send information-->
+<!-- " action " tells path of information-->
 	<div>
 		<label for="title">Title: </label>
 		<!--labeling posts-->
@@ -16,10 +24,10 @@
 	</div>
 
 	<div>
+		<button type="submit">Submit</button>
 		<!--making submit button-->
 		<!--needs to submit to actual database 
 		does really nothing but refresh page-->
-		<button type="submit">Submit</button>
 	</div>
 
 </form>
