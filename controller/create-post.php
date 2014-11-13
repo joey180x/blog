@@ -11,9 +11,21 @@
 	$post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 	//saving inputs in variables
 
-	echo "<p>Title: $title</p>";
-	echo "<p>Post: $post";
-	//recieves from database
+	$query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
+	//for inserting information in to table
+	//set values in post table
+	//when we run quesry the if else will tell it if the information is stored
+
+	if ($query) {
+		echo "<p>Successfully inserted post: $title</p>";
+		//checking if its true and information gets stored
+		//if false it couldnt insert information
+		
+	}
+
+	else{
+		echo "<p>$connection->error</p>";
+	}
 
 	$connection->close();
 	//closes connection to database.php	
