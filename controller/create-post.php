@@ -1,10 +1,10 @@
 <?php
-	require_once(__DIR__ . "/../model/database.php");
+	require_once(__DIR__ . "/../model/config.php");
 
 	$connection = new mysqli($host, $username, $password, $database);
 	//so we have acccess to these variables in databse.php
 	//using variables from the seporate file
-	//able to run queries
+	//able to run queries and connect to database
 	$title = filter_input(INPUT_POST, "title", FILTER_SANITIZE_STRING);
 	//makes it so blog dosent get hacked and filters input
 	//and where to grab it from
@@ -14,7 +14,7 @@
 	$query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
 	//for inserting information in to table
 	//set values in post table
-	//when we run quesry the if else will tell it if the information is stored
+	//when we run query the if else will tell it if the information is stored
 
 	if ($query) {
 		echo "<p>Successfully inserted post: $title</p>";
