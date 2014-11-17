@@ -29,6 +29,7 @@
 
 	$connection->close();
 	//closes connection to database.php	
+	//everytime we make a connection we have to close it
 
 
 ?>

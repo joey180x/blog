@@ -6,8 +6,9 @@
 	//for direct connection to database
 
 	$connection = new mysqli($host, $username, $password);
+	//passing in arguments such as username and password same thing
+	//as Database.php
 
-	
 	if($connection->connect_error) {
 		//If statement checks for error
 		//variable
@@ -63,3 +64,4 @@
 	}
 
 	$connection->close();
+	//closes connection
