@@ -1,10 +1,11 @@
 <?php
 class Database {
+	
 	private $connection;
 	//don't want other other files accessing this information
 	//want to store host, username, password, and name of database
-	private host;
-	private username;
+	private $host;
+	private $username;
 	private $password;
 	private $database;
 	//files are hidden from other files
@@ -16,24 +17,39 @@ class Database {
 	//global variables
 
 	public function __construct($host, $username, $password, $database ) {
-			$this->host = $host;
-			$this->username = $username;
-			$this->password = $password;
-			$this->database = $database;
-			//The constructor is called on an object after it has been created
+		$this->host = $host;
+		$this->username = $username;
+		$this->password = $password;
+		$this->database = $database;
+		//The constructor is called on an object after it has been created
+		//way to define your constructors inside a function
+		//establishing connection and want to store 
+		//this information to our global variable
+		//accesses "private host;"
+		//only exsists in function
+		//want to store the local information in the global information
+		//use classes to create objects
+		//when you use functions you have to call it every time
+		//when using classes you only have to call it once
 
-			//establishing connection and want to store 
-			//this information to our global variable
-			//accesses "private host;"
-			//only exsists in function
-			//want to store the local information in the global information
-			//use classes to create objects
-			//when you use functions you have to call it every time
-			//when using classes you only have to call it once
 		}
 
 		public function openConnection() {
-			//Opens connection
+		//A function is a block of statements that can be used repeatedly
+		//in a program not executed immediately when a page loads, and 
+		//executed by a call to the function.
+
+
+			//Opens connections->
+			this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+
+
+		if($this->connection->connect_error) {
+			//If statement checks for error
+			//variable
+			die("<p>Error: " . $this->connection->cennect_error . "</p>");
+		}
+	
 		}
 
 		public function closeConnection() {
