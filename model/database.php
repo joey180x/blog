@@ -61,6 +61,20 @@ class Database {
 		}
 
 		public function query($string)		
+			$this->openConnection();
+			//calling on public function and executing lines above
 
+			$query = $this->connection->query($string);
+			//need to access query function
+			//how we are able to refactor code
+			//using a variable
+			//once weve queried the database were gping to get result
+			//that will be stored in query
+
+			$this->closeConnection();
+
+			return $query();
+			//returning the result
+			//easier to maintain
 		}
 ?>

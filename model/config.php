@@ -6,5 +6,10 @@
 	$username = "root";
 	$password = "root";
 	$database = "blog_db";
-	//Database variables and informationuu
+	//Database variables and information
+	//helping us connect to database
+
+	$connection = new Database($host, $username, $password, $database);
+	//new object stored in connection
+	//having access to having access to function in database.php
 ?>
