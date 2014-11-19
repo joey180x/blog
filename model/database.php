@@ -54,6 +54,10 @@ class Database {
 
 		public function closeConnection() {
 			//Closes connection
+			if (isset($this->connection)) {
+				//"isset" checking if theres information in the variable
+				$this->connection->close();	
+			}
 		}
 
 		public function query($string)		
