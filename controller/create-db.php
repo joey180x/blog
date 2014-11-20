@@ -1,46 +1,7 @@
 <?php
-	//require_once("../model/database.php");
-	//Above Line isnt direct connection below line is
-	
 	require_once(__DIR__ . "/../model/config.php");
 	//for direct connection to database
 
-	$connection = new mysqli($host, $username, $password);
-	//passing in arguments such as username and password same thing
-	//as Database.php
-
-	if($connection->connect_error) {
-		//If statement checks for error
-		//variable
-		die("<p>Error: " . $connection->cennect_error . "</p>");
-	}
-	
-	$exists = $connection->select_db($database);
-	//try to access database on mysql
-
-	//Checks if it can connect to database
-	//If nothing comes up it means it dosent exist
-	//After you put ! it inverts the true to false 
-	//and false to true
-
-	
-		
-	#selects database and return if true or nah
-	$exists = $connection->select_db($database);
-
-	if(!$exists) {
-		//command to database
-		$query = $connection->query("CREATE DATABASE $database");
-
-
-		if($query) {
-		echo "<p>Succesfully created database: " . $database . "</p>";	
-			
-		}
-	}
-	else{
-		//telling you its already has been created
-		echo "<p>Database already exists.</p>";
 	}
 
 	//query id for each post
@@ -63,5 +24,3 @@
 		echo "<p>$connection->error</p>";
 	}
 
-	$connection->close();
-	//closes connection

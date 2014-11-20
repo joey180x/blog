@@ -1,4 +1,5 @@
 <?php
+	require_once(__DIR__ . "/database.php");
 	$path = "/blog/";
 	//pathway to blog
 	

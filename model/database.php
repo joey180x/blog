@@ -8,6 +8,7 @@ class Database {
 	private $username;
 	private $password;
 	private $database;
+	public  $error;
 	//files are hidden from other files
 	//when new object is created all files are hidden
 	//makes code easier to maintain and read
@@ -32,33 +33,65 @@ class Database {
 		//when you use functions you have to call it every time
 		//when using classes you only have to call it once
 
-		}
+		$this->connection = new mysqli($host, $username, $password);
+		//passing in arguments such as username and password same thing
+		//as Database.php
 
-		public function openConnection() {
-		//A function is a block of statements that can be used repeatedly
-		//in a program not executed immediately when a page loads, and 
-		//executed by a call to the function.
+		if($this->connection->connect_error) {
+		//If statement checks for error
+		//variable
+			die("<p>Error: " . $this->connection->cennect_error . "</p>");
+		
+		}
+	
+		$exists = $this->connection->select_db($database);
+		//try to access database on mysql
+
+		//Checks if it can connect to database
+		//If nothing comes up it means it dosent exist
+		//After you put ! it inverts the true to false 
+		//and false to true
+
+		if(!$exists) {
+			//command to database
+			$query = $connection->query("CREATE DATABASE $database");
+
+
+			if($query) {
+			echo "<p>Succesfully created database: " . $database . "</p>";	
+			
+			}
+		 }
+		 else{
+		 //telling you its already has been created
+		 echo "<p>Database already exists.</p>";
+		 }
+
+		 public function openConnection() {
+		 //A function is a block of statements that can be used repeatedly
+		 //in a program not executed immediately when a page loads, and 
+		 //executed by a call to the function.
 
 
 			//Opens connections->
-			this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+		this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
 
 		if($this->connection->connect_error) {
 			//If statement checks for error
 			//variable
 			die("<p>Error: " . $this->connection->cennect_error . "</p>");
-		}
+			}
 	
-		}
+		 }
 
-		public function closeConnection() {
+		 public function closeConnection() {
 			//Closes connection
 			if (isset($this->connection)) {
 				//"isset" checking if theres information in the variable
 				$this->connection->close();	
 			}
-		}
+		 }
 
 		public function query($string)		
 			$this->openConnection();
@@ -71,10 +104,15 @@ class Database {
 			//once weve queried the database were gping to get result
 			//that will be stored in query
 
+			if (!query) {
+				$this->error = this->connection->error;
+				//need to check status of query
+			}
+
 			$this->closeConnection();
 
 			return $query();
 			//returning the result
 			//easier to maintain
 		}
-?>
+?> 

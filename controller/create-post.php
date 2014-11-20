@@ -17,7 +17,6 @@
 		//checking if its true and information gets stored
 		//if false it couldnt insert information
 	}
-
 	else{
 		echo "<p>$connection->error</p>";
 	}
