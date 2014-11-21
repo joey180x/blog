@@ -4,6 +4,7 @@ class Database {
 	private $connection;
 	//don't want other other files accessing this information
 	//want to store host, username, password, and name of database
+
 	private $host;
 	private $username;
 	private $password;
@@ -16,6 +17,7 @@ class Database {
 	//using classes makes your code cleaner and creates objects
 	//so you can see everything you're doing in a small area
 	//global variables
+
 
 	public function __construct($host, $username, $password, $database ) {
 		$this->host = $host;
@@ -32,6 +34,7 @@ class Database {
 		//use classes to create objects
 		//when you use functions you have to call it every time
 		//when using classes you only have to call it once
+
 
 		$this->connection = new mysqli($host, $username, $password);
 		//passing in arguments such as username and password same thing
@@ -52,6 +55,7 @@ class Database {
 		//After you put ! it inverts the true to false 
 		//and false to true
 
+
 		if(!$exists) {
 			//command to database
 			$query = $connection->query("CREATE DATABASE $database");
@@ -65,8 +69,8 @@ class Database {
 		 else{
 		 //telling you its already has been created
 		 echo "<p>Database already exists.</p>";
+		 	}
 		 }
-
 		 public function openConnection() {
 		 //A function is a block of statements that can be used repeatedly
 		 //in a program not executed immediately when a page loads, and 
@@ -74,7 +78,7 @@ class Database {
 
 
 			//Opens connections->
-		this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
+		$this->connection = new mysqli($this->host, $this->username, $this->password, $this->database);
 
 
 		if($this->connection->connect_error) {
@@ -93,7 +97,7 @@ class Database {
 			}
 		 }
 
-		public function query($string)		
+		public function query($string) {	
 			$this->openConnection();
 			//calling on public function and executing lines above
 
@@ -104,15 +108,16 @@ class Database {
 			//once weve queried the database were gping to get result
 			//that will be stored in query
 
-			if (!query) {
-				$this->error = this->connection->error;
+			if (!$query) {
+				$this->error = $this->connection->error;
 				//need to check status of query
 			}
 
 			$this->closeConnection();
 
-			return $query();
+			return $query;
 			//returning the result
 			//easier to maintain
 		}
+	}
 ?> 

@@ -7,7 +7,7 @@
 	$post = filter_input(INPUT_POST, "post", FILTER_SANITIZE_STRING);
 	//saving inputs in variables
 
-	$query = $connection->query("INSERT INTO posts SET title = '$title', post = '$post'");
+	$query = $_SESSION["connection"]->query("INSERT INTO posts SET title = '$title', post = '$post'");
 	//for inserting information in to table
 	//set values in post table
 	//when we run query the if else will tell it if the information is stored
@@ -18,6 +18,6 @@
 		//if false it couldnt insert information
 	}
 	else{
-		echo "<p>$connection->error</p>";
+		echo "<p>" . $_SESSION["connection"]->error . "</p>";
 	}
 ?>
