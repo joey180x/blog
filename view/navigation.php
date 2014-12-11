@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/../model/config.php")
+require_once(__DIR__ . "/../model/config.php");
 //checks if file has already been included
 ?>
 <nav>
