@@ -1,7 +1,7 @@
 <?php
 	require_once(__DIR__ . "/../model/config.php");
 
-	$query = "SELECT = FROM posts";
+	$query = "SELECT * FROM posts";
 	$result = $_SESSION["connection"]->query($query);
 	//now it can retrieve the posts from the database
 

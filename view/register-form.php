@@ -5,7 +5,7 @@ require_once(__DIR__ . "/../model/config.php");
 
 <h1>Register</h1>
 
-<form method="post" action="<?php echo $path . "controller/create-post.php"; ?>">
+<form method="post" action="<?php echo $path . "controller/create-user.php"; ?>">
 <!--register and create posts-->
 	<div>
 	<label for="email">Email: </label>

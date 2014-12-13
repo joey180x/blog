@@ -15,10 +15,12 @@
 		//getting array of information and storing it in $row
 
 		if ($row["password"] === crypt($password, $row["salt"])) {
+				$_SESSION["authenticated"] = true;
 				echo "<p>Login Successful!</p>";
 			//checking if the hashed password is equal to the new 
 			//hashed password using the original salt and if it 
 			//is we can echo that it will be successful
+			//checking if the user has been authenticated
 		}
 		else {
 			echo "<p>Invalid username and password";

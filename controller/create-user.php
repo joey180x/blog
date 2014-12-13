@@ -9,7 +9,7 @@
 	$password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
 
 
-	$salt = "$5$" . "rounds=5000$" . uniqid(mt_random(), true) . "$";
+	$salt = "$5$" . "rounds=5000$" . uniqid(mt_rand(), true) . "$";
 	//creating a unique id to use a unique random number 
 	//and make it as unique as possible
 	//5000 rounds to get a unique encript password
@@ -17,7 +17,7 @@
 	//php recongnizes the $ sign as a variable
 
 
-	$hashedpassword = crypt($password, $salt);
+	$hashedPassword = crypt($password, $salt);
 	//returning a value stored in variable
 	//creating encrypted password
 

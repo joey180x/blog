@@ -1,6 +1,9 @@
 <?php
 	require_once(__DIR__ . "/database.php");
 	session_start();
+	session_regenerate_id(true);
+	//everytime the file is called upon its 
+	//going to regenerate the id aand delete the old session
 
 	$path = "/blog/";
 	//pathway to blog

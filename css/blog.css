@@ -1,7 +1,29 @@
 body{
-	background-color: red;
+	 font-family: 'Lato', sans-serif;
+  color: #FFF;
+  background: #322f30;
+  -webkit-font-smoothing: antialiased;;
 	/*Main background color*/
 }
+
+div#load_screen{
+	background: #000;
+	/*black*/
+	opacity: 1;
+	/*full opacity*/
+	position: fixed;
+	z-index: 10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+div#load_screen > div#loading{
+	color: #FFF;
+	width: 120px;
+	height: 24px;
+	margin: 300px auto;
+}
+
 @media (max-width: 320px) {
 	body { background-color: green; }
 	/*iPhone 5 Optimization*/

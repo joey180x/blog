@@ -1,6 +1,7 @@
 <?php
 	require_once(__DIR__ . "/../model/config.php");
 	//for direct connection to database
+	
 
 
 	//query id for each post
