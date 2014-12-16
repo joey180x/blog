@@ -10,11 +10,37 @@
 		<title>Joseph's Blog</title>
 	</head>
 <body>
-<div id="load_screen"><div id="loading">Loading Blog</div></div>
+
 	<div class= "container">
-		<h1>Joseph De La Portilla's Blog</h1>
-			<hr>
-				
+		<div class="col-xs-9">
+			<h1>Joseph's Blog</h1>
+			
+				<div id="social-media">
+					<a href="https://www.Facebook.com/">
+						<img src="/blog/images/Facebookicon.png" alt="Facebook" height="50px" width="50px">
+					</a>
+					<a href="http://www.Instagram.com/">
+						<img src="/blog/images/Instagram.png" alt="Facebook" height="50px" width="50px">
+					</a>
+					<a href="http://www.Twitter.com/">
+						<img src="/blog/images/Twittericon.png" alt="Facebook" height="50px" width="50px">
+					</a>
+					<hr>
+				</div>
+			</div>
+			<a href="/blog/controller/logout-user.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
+			<a href="/blog/login.php" class="btn btn-primary btn-lg active" role="button">Login</a>
+			<a href="/blog/controller/register.php" class="btn btn-primary btn-lg active" role="button">Register</a>
+		</div>
+ 
+
+
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>	
+ <script type="text/javascript" src="java/javascript.js"></script>
+	</body>
+</html>
 
 
 

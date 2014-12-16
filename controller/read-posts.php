@@ -7,11 +7,12 @@
 
 	if($result) {
 		while ($row = mysqli_fetch_array($result)) {
-			echo "<div class='post'>";
-			echo "<h2" . $row['title'] . "</h2>";
-			echo "<br />";
-			echo "<p>" . $row['post'] . "</h1>";
+			echo "<div class='row'>";
+			echo "<h2>" . $row['title'] . "</h2>";
 			echo "<br/>";
+			echo "<p>" . $row['post'] . "</p>";
+			echo "<br/>";
+			echo "<p>Posted on:" . $row['DateTime'] . "</p>";
 			echo "</div>";
 			//echos blog posts and makes them show
 		}
