@@ -1,13 +1,51 @@
 body{
+	 background-image:url('../images/background.jpg');
 	 font-family: 'Lato', sans-serif;
-  	color: black;
-  	background: #322f30;
+  	color: white;
+  	/*background: #322f30;*/
   	-webkit-font-smoothing: antialiased;;
+	background-position:center;
+	background-attachment: fixed;
+	margin-top: 150px;
+}
 	/*Main background color*/
 }
 #about-me{
 	margin-left: 40%;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
 }
+#header{
+	 opacity: 0.8;
+	width: 102%;
+	position: fixed;	
+	top: 0;
+	height: 165px;
+	background-color: #322f30;
+	z-index:300;
+}	
+
+#social-media{
+	float: right;
+	margin-left: 20%;
+	margin-bottom: 10%;
+}
+#posts{
+	background-color: rgba(0, 0, 0, 0.8);
+	margin-top: 18.5px;
+	margin-left: 680px;
+}
+.col-xs-6{
+	background-color: rgba(0, 0, 0, 0.8);
+	margin-top: 5%;
+
+}
+#aboutme{
+	position: fixed;
+	float: right;
+	margin-left: 0px;
+}
+
 /* div#load_screen{
 	background: #000;
 	/*black*/
