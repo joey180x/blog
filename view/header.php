@@ -30,7 +30,7 @@
 			</div>
 			<a href="/blog/controller/logout-user.php" class="btn btn-primary btn-lg active" role="button">Logout</a>
 			<a href="/blog/login.php" class="btn btn-primary btn-lg active" role="button">Login</a>
-			<a href="/blog/controller/register.php" class="btn btn-primary btn-lg active" role="button">Register</a>
+			<a href="/blog/register.php" class="btn btn-primary btn-lg active" role="button">Register</a>
 		</div>
  
 

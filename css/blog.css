@@ -27,12 +27,12 @@ div#load_screen > div#loading{
 }
 
 @media (max-width: 320px) {
-	body { background-color: green; }
+	body { background-color: #322f30; }
 	/*iPhone 5 Optimization*/
 
 	}
 		@media (min-width: 321px) and (max-width: 1024px) {
-			body { background-color: aqua; }
+			body { background-color: #322f30; }
 			/*iPad 3/4 Optimization*/
 		}
 	}
