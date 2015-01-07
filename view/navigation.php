@@ -12,7 +12,7 @@ if (!authenticateUser()) {
 ?>
 <nav>
 	<ul>
-		<li><a href="<?php echo $path . "posts.php"?>">Blog Post Form</a></li>
+		<a href="<?php echo $path . "posts.php"?>">Blog Post Form</a></li>
 		<!-- adds new link to post.php -->
 		<!-- echos your blog inside of posts.php -->
 	</ul>

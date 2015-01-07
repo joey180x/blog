@@ -13,6 +13,7 @@
 	<div id="header">
 		<div class="col-xs-4">
 			<h1>Welcome to my Blog</h1>
+			</div>
 				<div>
 				<a href="/blog/controller/logout-user.php" class="btn btn-primary btn-s active" role="button">Logout</a>
 				<a href="/blog/login.php" class="btn btn-primary btn-s active" role="button">Login</a>
@@ -28,8 +29,6 @@
 					<a href="http://www.Twitter.com/xjoey180x">
 						<img src="/blog/images/Twittericon.png" alt="Facebook" height="50px" width="50px">
 					</a>
-					
-				</div>
 			</div>
 		</div>
 			

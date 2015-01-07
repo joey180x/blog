@@ -20,15 +20,16 @@ body{
 	width: 102%;
 	position: fixed;	
 	top: 0;
-	height: 165px;
+	height: 150px;
 	background-color: #322f30;
 	z-index:300;
 }	
 
 #social-media{
 	float: right;
-	margin-left: 20%;
+	margin-right: 53%;
 	margin-bottom: 10%;
+	margin-top: 2%;
 }
 #posts{
 	background-color: rgba(0, 0, 0, 0.8);
@@ -45,6 +46,7 @@ body{
 	float: right;
 	margin-left: 0px;
 }
+
 
 /* div#load_screen{
 	background: #000;
